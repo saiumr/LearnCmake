@@ -31,7 +31,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 `VERSION`是用project()命令设定的，这部分要打印发行软件版本号，输入文件`TutorialConfig.h.in`，输出文件`TutorialConfig.h`，输出文件不存在时会自动创建  
 
-由于配置的文件将被写入到项目二进制目录中，因此我们必须将该目录添加到路径列表中以搜索包含文件。这时就要用到target_include_directories()命令。  
+由于配置的文件将被写入到项目二进制目录中，因此我们必须将该目录添加到路径列表中以搜索包含文件。这时就要用到target_include_directories()命令。它用于指定编译得到的二进制文件在哪里搜索头文件  
 
 ```cmake
 <PROJECT-NAME>_VERSION_MAJOR

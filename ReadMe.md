@@ -3,7 +3,7 @@
 Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)  
 
 - [x] Step 1: A Basic Starting Point  
-- [] Step 2: Adding a Library  
+- [x] Step 2: Adding a Library  
 - [] Step 3: Adding Usage Requirements for a Library  
 - [] Step 4: Adding Generator Expressions  
 - [] Step 5: Installing and Testing  
