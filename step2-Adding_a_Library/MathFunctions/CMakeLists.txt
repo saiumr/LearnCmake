@@ -11,6 +11,7 @@ option(USE_MYMATH "Use tutorial provided math implementation" ON)
 # TODO 8: If USE_MYMATH is ON, use target_compile_definitions to pass
 # USE_MYMATH as a precompiled definition to our source files
 if (USE_MYMATH)
+  # The macro USE_MYMATH is visible in the source code of MathFunctions
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 
 # TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with
