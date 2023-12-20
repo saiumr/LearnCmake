@@ -7,7 +7,7 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [x] Step 3: Adding Usage Requirements for a Library  
 - [x] Step 4: Adding Generator Expressions  
 - [x] Step 5: Installing and Testing  
-- [] Step 6: Adding Support for a Testing Dashboard  
+- [x] Step 6: Adding Support for a Testing Dashboard  
 - [] Step 7: Adding System Introspection  
 - [] Step 8: Adding a Custom Command and Generated File  
 - [] Step 9: Packaging an Installer  
@@ -16,3 +16,5 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [] Step 12: Packaging Debug and Release  
 
 Compare 'step*' folder with official-source, extract modification.  
+
+Checking CDash result: [CDash.org](https://my.cdash.org/index.php?project=CMakeTutorial)  
