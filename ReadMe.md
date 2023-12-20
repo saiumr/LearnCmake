@@ -6,7 +6,7 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [x] Step 2: Adding a Library  
 - [x] Step 3: Adding Usage Requirements for a Library  
 - [x] Step 4: Adding Generator Expressions  
-- [] Step 5: Installing and Testing  
+- [x] Step 5: Installing and Testing  
 - [] Step 6: Adding Support for a Testing Dashboard  
 - [] Step 7: Adding System Introspection  
 - [] Step 8: Adding a Custom Command and Generated File  
