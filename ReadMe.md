@@ -8,7 +8,7 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [x] Step 4: Adding Generator Expressions  
 - [x] Step 5: Installing and Testing  
 - [x] Step 6: Adding Support for a Testing Dashboard  
-- [] Step 7: Adding System Introspection  
+- [x] Step 7: Adding System Introspection  
 - [] Step 8: Adding a Custom Command and Generated File  
 - [] Step 9: Packaging an Installer  
 - [] Step 10: Selecting Static or Shared Libraries  
