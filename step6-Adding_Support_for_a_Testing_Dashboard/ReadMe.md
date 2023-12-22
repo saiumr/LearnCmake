@@ -22,7 +22,7 @@ cd build
 cmake .. -G "MinGW Makefiles"
 cmake --build .
 cmake --install .
-ctest -D CMakeTutorial
+ctest -D CMakeTutorial  # use CDash
 ```
 
 checking results: [CDash.org](https://my.cdash.org/index.php?project=CMakeTutorial)
