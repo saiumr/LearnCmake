@@ -11,7 +11,7 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [x] Step 7: Adding System Introspection  
 - [x] Step 8: Adding a Custom Command and Generated File  
 - [x] Step 9: Packaging an Installer  
-- [] Step 10: Selecting Static or Shared Libraries  
+- [x] Step 10: Selecting Static or Shared Libraries  
 - [] Step 11: Adding Export Configuration  
 - [] Step 12: Packaging Debug and Release  
 
