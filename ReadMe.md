@@ -13,7 +13,7 @@ Learning from [Official Toturial](https://cmake.org/cmake/help/latest/guide/tuto
 - [x] Step 9: Packaging an Installer  
 - [x] Step 10: Selecting Static or Shared Libraries  
 - [x] Step 11: Adding Export Configuration  
-- [] Step 12: Packaging Debug and Release  
+- [x] Step 12: Packaging Debug and Release  
 
 Compare 'step*' folder with official-source, extract modification.  
 
