@@ -86,3 +86,55 @@ export(EXPORT MathFunctionsTargets
   FILE "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsTargets.cmake"
 )
 ```
+
+## 补充  
+
+在一个实际的 CMake 项目中，PACKAGE_PREFIX_DIR 的值通常是为了表示包的根目录，这个值会被用于设置包的安装路径、包含目录、库目录等信息，以便在使用这个包的项目中正确地定位包的文件。  
+
+假设你有以下的项目结构：  
+
+```lua
+MyLib
+|-- CMakeLists.txt
+|-- include
+|   `-- mylib
+|       `-- mylib.h
+|-- src
+|   `-- mylib.cpp
+`-- build
+```
+
+其中，`MyLib` 是你的 CMake 项目，包含了一个库 `libmylib.so`，以及头文件 `mylib.h`。现在你希望将这个库和头文件安装到系统，以便其他项目可以轻松使用。  
+
+在 `CMakeLists.txt` 文件中，你可能会使用 `configure_package_config_file` 来生成配置文件 `MyLibConfig.cmake`，并定义 `PACKAGE_PREFIX_DIR`：  
+
+```cmake
+# CMakeLists.txt
+
+include(CMakePackageConfigHelpers)
+
+configure_package_config_file(
+  "Config.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/MyLibConfig.cmake"
+  INSTALL_DESTINATION "lib/cmake/MyLib"
+  NO_SET_AND_CHECK_MACRO
+  NO_CHECK_REQUIRED_COMPONENTS_MACRO
+)
+
+install(
+  FILES "${CMAKE_CURRENT_BINARY_DIR}/MyLibConfig.cmake"
+  DESTINATION "lib/cmake/MyLib"
+)
+
+# ... 其他设置和安装步骤
+```
+
+在 Config.cmake.in 文件中，`@PACKAGE_INIT@` 被扩展为：  
+
+```cmake
+get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../" ABSOLUTE)
+```
+
+这里，`PACKAGE_PREFIX_DIR` 被设置为 MyLib 项目的上两级目录的绝对路径，即 MyLib 项目的根目录。这个值会在生成的 `MyLibConfig.cmake` 文件中使用，以便在其他项目中正确地设置包含目录、库目录等路径。
+
+假设你将 MyLib 安装到系统，那么在其他项目中使用这个包时，`PACKAGE_PREFIX_DIR` 的值就会指向 MyLib 的安装目录。这样，其他项目就可以使用这个值来正确地引用 MyLib 的头文件和库文件。
